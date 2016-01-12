@@ -1,3 +1,15 @@
+commit 9543928af3f6a03a1dc8ee844473b0ae6e800ec5
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Mon Jan 11 22:57:38 2016 -0300
+
+    added all the common features
+
+commit 19f00ebc8e0fba0aa97222710704836e9b3aa6f8
+Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
+Date:   Mon Jan 11 22:38:57 2016 -0300
+
+    added the principal features of the program and the delete by description feature
+
 commit c0b4a9f8338d0adcde26f92f060c09478afd265c
 Author: Gonzalo Gisbert <gonzalo.a.gisbert@gmail.com>
 Date:   Mon Jan 11 16:44:04 2016 -0300
