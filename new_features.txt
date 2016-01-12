@@ -1,3 +1,3 @@
-Feature #1: added an implementation to delete an item by sending the description
-Feature #2: added an implementation to update an item by sending the description (to be implemented)
-Feature #3: Simple UI 
+Feature #1: Simple UI 
+Feature #2: added an implementation to delete an item by sending the description implemented in the simple UI
+Feature #3: added an implementation to update an item by sending the description implemented in the simple UI

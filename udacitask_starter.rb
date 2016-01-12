@@ -1,4 +1,4 @@
-require_relative 'todolist.rb'
+require_relative 'todolist_starter.rb'
 require_relative 'ui.rb'
 
 # this method serves when the user don't want to use the new UI
@@ -54,16 +54,18 @@ def no_ui_program
 	todo.print_list
 end
 
+UI.new
 
-puts ("Want to see the new UI??? (yes or no)")
-action = UI.take_user_input
 
-case action
-when "no" 
-	no_ui_program
-when "yes"
-	UI.new
-else 
-	puts  "Wrong, Please restart the program"
-end
+#puts ("Want to see the new UI??? (yes or no)")
+#action = UI.take_user_input
+
+#case action
+#when "no" 
+#	no_ui_program
+#when "yes"
+#	UI.new
+#else 
+#	puts  "Wrong, Please restart the program"
+#end
 

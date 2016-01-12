@@ -44,6 +44,18 @@ class TodoList
 	    end
     end
 
+    def update_item_by_description(item_description,old_description)
+
+        @items.each do |item|
+            if item.item_description_equals?((old_description))
+                item.description = item_description
+
+            end
+        end
+
+    end
+
+
     def rename_list(title_name)
     	@title=title_name
     end
@@ -55,7 +67,7 @@ class TodoList
     	UI.print_line_separator
     	counter = 1;
     	@items.each do |item|
-    		puts counter.to_s + " " + item.description + " completed " + item.completed_status.to_s;
+    		puts "#{counter.to_s} #{item.description} completed #{item.completed_status.to_s}";
     		counter +=1;
     	end
     	UI.print_line_separator
