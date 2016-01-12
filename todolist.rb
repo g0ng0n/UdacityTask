@@ -19,7 +19,7 @@ class TodoList
     def delete_item_by_pos(position)
     	#since array are zero based datastructures we rest 1 to the position
     	position -=1
-    	print_delete_message(@items[position].description)
+    	UI.print_delete_message(@items[position].description)
     	@items.delete_at(position);
 
     end
@@ -37,40 +37,41 @@ class TodoList
 
     	@items.each do |item|
 	    	if item.item_description_equals?((item_description))
-       			print_delete_message(item_description)
+       			UI.print_delete_message(item_description)
      	    	@items.delete(item)
 
 	    	end
 	    end
     end
 
-    def rename_list(name)
-    	@title=name
+    def rename_list(title_name)
+    	@title=title_name
     end
 
     def print_list 
 
-    	print_line_separator
+    	UI.print_line_separator
     	puts @title
-    	print_line_separator
-    	counter = 0;
+    	UI.print_line_separator
+    	counter = 1;
     	@items.each do |item|
     		puts counter.to_s + " " + item.description + " completed " + item.completed_status.to_s;
     		counter +=1;
     	end
-    	print_line_separator
+    	UI.print_line_separator
     	puts "-> End Of #{title}"
-    	print_line_separator
+    	UI.print_line_separator
     end
 
-    private
-	def print_line_separator
-	    puts '-' * 20
-	end
+    def todo_list_name_equals?(title_name)
+	  	if @title.eql?(title_name);
+	  		return true;
+	  	else
+	  		return false;
+	  	end
+  	end
 
-	def print_delete_message(item_description)
-		puts "-> Item " + item_description + " Deleted"
-	end
+
 end
 
 class Item
@@ -87,7 +88,6 @@ class Item
 	  	if @description.eql?(description);
 	  		return true;
 	  	else
-	  		puts "-> Item not found"
 	  		return false;
 	  	end
   	end
