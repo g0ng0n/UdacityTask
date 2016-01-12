@@ -24,11 +24,13 @@ todo.delete_item_by_pos(2)
 todo.print_list
 
 # Update the completion status of the first item to complete
-
+todo.update_item_by_pos(0,true)
 # Print the list
+todo.print_list
 
 # Update the title of the list
-
+todo.rename_list("Gonzo TodoList")
 # Print the list
+todo.print_list
 
 
